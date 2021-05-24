@@ -14,11 +14,18 @@
   }
 
   view_card = () => {
+
     let name = $('#name').val()
+    $('.invalid-feedback').hide()
+    if (name == '' || name == null){
+      $('#errname').html('<strong>Please Enter Your Name</strong>')
+      $('.invalid-feedback').show()
+    }else{      
+      $('#toName').html(name)
 
-    $('#toName').html(name)
+      $('#nameModal').modal('hide')
+    }
 
-    $('#nameModal').modal('hide')
   }
 
   $(document).ready(function () {
