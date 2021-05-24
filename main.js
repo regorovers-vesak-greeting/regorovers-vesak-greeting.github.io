@@ -11,6 +11,7 @@
 
   onload = () => {
     $('#nameModal').modal('show')
+    // $('.content').removeClass('d-none')
   }
 
   String.prototype.capitalize = function() {
@@ -18,7 +19,7 @@
   }
 
   view_card = () => {
-
+    $('.content').removeClass('d-none')
     let name = $('#name').val().capitalize()
     $('.invalid-feedback').hide()
     if (name == '' || name == null){
